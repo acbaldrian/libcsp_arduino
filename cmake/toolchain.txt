@@ -1,0 +1,16 @@
+    
+
+ARDUINO_DIR      = /Users/andrew/Library/Arduino15
+PLATFORM_DIR     = /Users/andrew/Library/Arduino15/packages/rp2040
+ARDUINO_PICO_DIR = /Users/andrew/Library/Arduino15/packages/rp2040/hardware/rp2040/6.2.0
+
+set(SYSTEM_DIR "${PLATFORM_DIR}/tools/pqt-gcc/5.0.0-9576866")
+set(COMPILER_DIR "${SYSTEM_DIR}/bin")
+
+
+    -iprefix${ARDUINO_PICO_DIR}/ \
+    @${ARDUINO_PICO_DIR}/lib/rp2040/platform_inc.txt \
+    @${ARDUINO_PICO_DIR}/lib/core_inc.txt \
+    @${ARDUINO_PICO_DIR}/lib/platform_def.txt \
+    @${ARDUINO_PICO_DIR}/lib/rp2040/platform_def.txt \
+    -isystem ${SYSTEM_DIR}/arm-none-eabi"
